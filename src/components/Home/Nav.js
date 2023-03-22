@@ -16,24 +16,11 @@ class Nav extends React.Component {
         super(props)
 
         this.state = {
-            menu: [ ["Кофе", <BiCoffeeTogo />], 
-                    ["Чай", <TbTeapot />], 
-                    ["Пицца", <CiPizza />], 
-                    ["Паста", <CiBowlNoodles />], 
-                    ["Супы", <MdOutlineSoupKitchen />], 
-                    ["Салаты", <TbSalad />], 
-                    ["Коктейли", <FaCocktail />] ],
-
-            icon: false,
+            menu: [ "Кофе", "Чай", "Пицца", "Паста", "Супы", "Салаты", "Коктейли", "Боулы", "Смузи", "Сок", "Какао", "Лимонад" ]
         }
     }
 
     render () {
-        // if (document.getElementsByClassName('nav')[0].classList.contains('nav_active')) this.setState({icon: true})
-        // else this.setState({icon: true})
-
-        console.log(document.getElementsByClassName('nav')[0].classList)
-        
         return (
             <nav className="nav">
                 <div className="nav_opacity" />
@@ -46,7 +33,7 @@ class Nav extends React.Component {
                     <div className="nav_ul">
                         {
                             this.state.menu.map((item) => 
-                                <a className="nav_li" href="" > {item[0]} </a>
+                                <a className="nav_li" href="" > { item } </a>
                             )
                         }
                     </div>

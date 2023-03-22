@@ -3,8 +3,7 @@
     background-size: 500px;
     width: 100vw;
     background-attachment: fixed;
-    height: 500px;
-    border-radius: 0 0 30px 30px;
+    height: 100vh;
     position: fixed;
     transition: 0.2s;
 }
@@ -12,22 +11,22 @@
 .nav_opacity {
     position: absolute;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 0 0 30px 30px;
-    transition: 0.2s;
 }
 
 .nav .container {
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav_logo {
     width: 250px;
     height: 250px;
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
     transition: 0.1s;
 }
 
@@ -49,6 +48,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .nav_li {
@@ -76,28 +76,6 @@
     box-shadow: 2px 2px 7px 0px #75bbfd;
     transition: 0.2s;
     animation: ease-out infinite 3s boxShadow;
-}
-
-.nav_active {
-    height: 100px;
-    transition: 0.2s;
-}
-
-.nav_active .container {
-    display: flex;
-    align-items: center;
-    height: 100px;
-}
-
-.nav_active .nav_opacity {
-    height: 100px;
-    transition: 0.2s;
-}
-
-.nav_active .nav_logo {
-    width: 90px;
-    height: 90px;
-    margin: 0;
 }
 
 @keyframes boxShadow {

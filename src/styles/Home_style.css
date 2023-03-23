@@ -1,0 +1,6 @@
+.Home {
+    display: flex;
+    flex-direction: row;
+    width: 1000000px;
+    transition: 0.3s;
+}

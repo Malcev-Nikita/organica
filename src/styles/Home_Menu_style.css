@@ -21,4 +21,46 @@
 .menu_header {
     font-size: 40px;
     margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_card {
+    width: 23%;
+    height: 350px;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding-top: 20px;
+}
+
+.menu_card_img {
+    width: 230px;
+    border-radius: 10px;
+}
+
+.menu_card_header {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+
+.menu_card_weight {
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 0;
+}
+
+.menu_card_price {
+    font-size: 26px;
+    font-weight: 500;
 }

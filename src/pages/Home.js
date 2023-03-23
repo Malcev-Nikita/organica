@@ -13,8 +13,6 @@ class Home extends React.Component {
             menu: [ "Кофе", "Чай", "Пицца", "Паста", "Супы", "Салаты", "Коктейли", "Боулы", "Смузи", "Сок", "Какао", "Лимонад" ],
             index: 0,
             slider: 0,
-
-            
         }
 
         this.chandeIndexItem = this.chandeIndexItem.bind(this)

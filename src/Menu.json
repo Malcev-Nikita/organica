@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Груша-горгондзола",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "3f8a1a3af351496e9313d294c943f802-216x188.jpeg",
+        "price": "440",
+        "weight": "380"
+    },
+
+    {
+        "name": "Четыре сыра",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "b85c1dd9f2e94eab97fec8cea4a4a6c1-216x188.jpeg",
+        "price": "480",
+        "weight": "330"
+    },
+
+    {
+        "name": "Страчателла",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "185676e52b4141e09527352114f37a71-216x188.jpeg",
+        "price": "500",
+        "weight": "350"
+    },
+
+    {
+        "name": "Нордика",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "7411ecbf4b974ca087fca222812da61f-216x188.jpeg",
+        "price": "540",
+        "weight": "500"
+    },
+
+    {
+        "name": "Маргарита",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "1e29e9d1a8714cf899c427ba4810da9a-216x188.jpeg",
+        "price": "370",
+        "weight": "420"
+    },
+
+    {
+        "name": "Пеперони",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "dd69bc6d39d4412e8c2bbb4201420262-216x188.jpeg",
+        "price": "460",
+        "weight": "380"
+    },
+
+    {
+        "name": "Курица",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "a743fa882fa944199f66bc0f0c742f05-216x188.jpeg",
+        "price": "490",
+        "weight": "460"
+    },
+
+    {
+        "name": "Пиканта",
+        "description": "",
+        "categoty": "Пицца",
+        "photo": "dce280becaba4932abe792e1d5becaf2-216x188.jpeg",
+        "price": "500",
+        "weight": "400"
+    }
+]

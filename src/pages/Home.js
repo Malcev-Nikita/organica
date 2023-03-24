@@ -1,4 +1,5 @@
 import React from "react";
+import anime from 'animejs/lib/anime.es.js';
 
 import Nav from "../components/Home/Nav";
 import Menu from "../components/Home/Menu";
@@ -24,13 +25,42 @@ class Home extends React.Component {
         this.setState({
             index: id,
             slider: -1920 * id,
+            favorite: false,
         })
+
+        anime({
+            targets: document.getElementsByClassName("favorite_container_active"),
+            width: 0,
+            height: 0,
+            padding: 0,
+            easing: 'easeInOutQuad',
+            duration: 300
+        });
     }
 
     changeFavorite(value) {
         this.setState({
             favorite: !value,
         })
+
+        if (this.state.favorite) {
+            anime({
+                targets: document.getElementsByClassName("favorite_container_active"),
+                width: 0,
+                height: 0,
+                padding: 0,
+                easing: 'easeInOutQuad',
+                duration: 300
+            });
+        }
+        else {
+            anime({
+                targets: document.getElementsByClassName("favorite_container"),
+                width: 500,
+                height: 500,
+                padding: 24,
+            });
+        }
     }
     
     render () {

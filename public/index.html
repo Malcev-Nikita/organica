@@ -21,32 +21,13 @@
     <div id="root"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script>
       window.addEventListener('scroll', function(e) {
         const nav = document.getElementsByClassName('nav')[0]
 
         window.pageYOffset > 100 ? nav.classList.add("nav_active") : nav.classList.remove("nav_active")
-      });
-    </script>
-
-    <script>
-      anime({
-        targets: 'div',
-        translateX: '13rem',
-        rotate: {
-          value: 180,
-          duration: 1500,
-          easing: 'easeInOutQuad'
-        },
-        scale: {
-          value: 2,
-          delay: 150,
-          duration: 850,
-          easing: 'easeInOutExpo',
-        },
-        loop: true,
-        direction: 'alternate'
       });
     </script>
   </body>

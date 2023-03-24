@@ -3,6 +3,7 @@ import React from "react";
 import "../../styles/Home_Menu_style.css"
 
 import { BiHome } from 'react-icons/bi';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 const menu = require('../../Menu.json')
 
@@ -14,6 +15,14 @@ class Menu extends React.Component {
                     <button className="back" onClick={() => this.props.index(0)}>
                         <BiHome />
                     </button>
+
+                    <button className="favorite" onClick={() => this.props.changeFavorite(this.props.favorite)}>
+                        <AiOutlineHeart />
+                    </button>
+
+                    <div className="favorite_container">
+
+                    </div>
 
                     <h3 className="menu_header">{this.props.item}</h3>
 

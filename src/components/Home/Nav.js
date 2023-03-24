@@ -17,11 +17,11 @@ class Nav extends React.Component {
                         />
 
                         <div className="nav_ul">
-                            {
-                                this.props.menu.map((item) => 
-                                    <a className="nav_li" onClick={() => this.props.index(this.props.menu.indexOf(item) + 1)} > { item } </a>
-                                )
-                            }
+                        {
+                            this.props.menu.map((item) => 
+                                <a className="nav_li" onClick={() => this.props.index(this.props.menu.indexOf(item) + 1)} > { item } </a>
+                            )
+                        }
                         </div>
                     </div>
                 </div>

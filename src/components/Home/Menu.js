@@ -4,6 +4,7 @@ import "../../styles/Home_Menu_style.css"
 
 import { BiHome } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { CiBookmarkMinus } from 'react-icons/ci';
 
 const menu = require('../../Menu.json')
 
@@ -32,13 +33,16 @@ class Menu extends React.Component {
 
                     <div className="favorite_container">
                     {
-                        JSON.parse(localStorage.getItem("favorite")).map((item, key) => (
-                            <div className="favorite_card">
-                                <img className="favorite_card_img" src={`./menu/${item.photo}`} alt="" />
-                                <h3 className="favorite_card_header">{item.name}</h3>
-                                <p className="favorite_card_price">{item.price} ₽</p>
-                            </div>
-                        ))
+                        // (document.cookie != null) ? (
+                        //     favorite_menu.map((item, key) => (
+                        //         <div className="favorite_card">
+                        //             <img className="favorite_card_img" src={`./menu/${item.photo}`} alt="" />
+                        //             <h3 className="favorite_card_header">{item.name}</h3>
+                        //             <p className="favorite_card_price">{item.price} ₽</p>
+                        //             <CiBookmarkMinus className="favorite_card_minus" onClick={() => localStorage.removeItem("favorite")} />
+                        //         </div>
+                        //     ))
+                        // ) : ("")
                     }
                     </div>
 
@@ -51,11 +55,26 @@ class Menu extends React.Component {
                                 return (
                                     <div className="menu_card">
                                         <button className="menu_favorite" onClick={() => {
-                                            this.setState({
-                                                JSON: favorite_menu.push(item)
-                                            })
+                                            if (JSON.parse(localStorage.getItem("favorite")) != null) {
+                                                console.log(1)
+                                                this.setState({
+                                                    favorite_menu: JSON.parse(localStorage.getItem("favorite"))
+                                                })
+                                            }
+                                            console.log(this.state.favorite_menu)
 
-                                            localStorage.setItem("favorite", JSON.stringify(favorite_menu))
+                                            this.setState({
+                                                favorite_menu: this.state.favorite_menu.push(item)
+                                            })
+                                            // favorite_menu.push(item)
+                                            // console.log(favorite_menu)
+                                            // console.log(JSON.parse(localStorage.getItem("favorite")))
+                                            localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
+                                            // if(localStorage.getItem("favorite"))
+                                            // console.log(localStorage.getItem("favorite"))
+                                            // console.log(document.cookie)
+                                            // document.cookie = `favorite = ${JSON.stringify(this.state.JSON)}`
+                                            // console.log(JSON.parse(document.cookie.slice(9, document.cookie.length)))
                                         }}>
                                             <AiOutlineHeart />
                                         </button>

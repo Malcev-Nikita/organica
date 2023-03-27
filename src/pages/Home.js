@@ -58,7 +58,9 @@ class Home extends React.Component {
                 targets: document.getElementsByClassName("favorite_container"),
                 width: 500,
                 height: 500,
-                padding: 24,
+                paddingTop: 10,
+                paddingBottom: 10,
+                paddingLeft: 29,
             });
         }
     }

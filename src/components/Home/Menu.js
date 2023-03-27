@@ -14,13 +14,14 @@ class Menu extends React.Component {
         super(props) 
 
         this.state = {
-            favorite_menu: []
+            favorite_menu: [],
+            index: 0,
+            i: 0,
         }
     }
 
     render () {
         let favorite_menu_copy = []
-        let index;
 
         if (JSON.parse(localStorage.getItem("favorite")) != null && this.state.favorite_menu.length === 0) {
             this.setState({
@@ -87,13 +88,21 @@ class Menu extends React.Component {
                             if (item.categoty === this.props.item) {
                                 return (
                                     <div className="menu_card">
-                                        <button className="menu_favorite" onClick={() => {
-                                            index = Array.from(document.querySelectorAll('.menu_favorite')).findIndex(n => n.classList.contains('menu_favorite'));
-
+                                        <button className="menu_favorite" onClick={(e) => {
+                                            // anime({
+                                            //     targets: e.target.localName === "svg" ? (e.target.parentNode) : (e.target),
+                                            //     padding: 0,
+                                            //     width: 0,
+                                            //     height: 0,
+                                            //     duration: 300,
+                                            // })
+                                            let elem = e.target.localName === "svg" ? (e.target) : (e.target.querySelector('svg'))
+                                            console.log(elem.getBoundingClientRect())
                                             anime({
-                                                targets: document.getElementsByClassName("menu_favorite")[index],
-                                                width: 300,
-                                                height: 300,
+                                                targets: elem,
+                                                color: '#000',
+                                                translateX: 1920 - elem.getBoundingClientRect().x - 70,
+                                                translateY: -elem.getBoundingClientRect().y + 40,
                                             })
 
                                             favorite_menu_copy = this.state.favorite_menu

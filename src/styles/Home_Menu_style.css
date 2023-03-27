@@ -55,6 +55,12 @@
     transition: .2s;
 }
 
+.menu_favorite_absolute_icon {
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px
+}
+
 .menu_card_img {
     width: 230px;
     border-radius: 10px;

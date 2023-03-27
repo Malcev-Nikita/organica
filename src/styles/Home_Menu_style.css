@@ -173,3 +173,20 @@
     color: red;
     transition: .1s;
 }
+
+.favorite p{
+    background-color: #000;
+    width: 17px;
+    height: 17px;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -13px;
+    right: 7px;
+    transition: .2s;
+}

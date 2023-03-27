@@ -61,6 +61,7 @@ class Home extends React.Component {
                 paddingTop: 10,
                 paddingBottom: 10,
                 paddingLeft: 29,
+                duration: 700
             });
         }
     }

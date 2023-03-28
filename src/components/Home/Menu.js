@@ -17,6 +17,7 @@ class Menu extends React.Component {
             favorite_menu: [],
             index: 0,
             i: 0,
+            screen: 0,
         }
     }
 
@@ -29,22 +30,24 @@ class Menu extends React.Component {
             })
         }
 
-        if (JSON.parse(localStorage.getItem("favorite")) != null && this.state.favorite_menu) {
+        if (JSON.parse(localStorage.getItem("favorite")) != null) {
             JSON.parse(localStorage.getItem("favorite")).map((item, key) => {
+                console.log(item)
                 Array.from(document.querySelectorAll('.menu_card')).map(menu => {
                     if (item.name === menu.querySelector('h3').textContent) {
                         menu.querySelector('.menu_favorite').classList.add("menu_favorite_none")
                     }
-                    else {
-                        menu.querySelector('.menu_favorite').classList.remove("menu_favorite_none")
-                    }
                 })
-            }) 
+            })
+            
+            this.setState({ screen: Math.random() });
         }
         else {
             Array.from(document.querySelectorAll('.menu_card')).map(menu => {
                 menu.querySelector('.menu_favorite').classList.remove("menu_favorite_none")
             })
+
+            this.setState({ screen: Math.random() });
         }
 
         return (

@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu_favorite svg {
@@ -53,12 +54,6 @@
 .menu_favorite:hover svg {
     fill: red;
     transition: .2s;
-}
-
-.menu_favorite_absolute_icon {
-    position: absolute;
-    top: 7.5px;
-    left: 7.5px
 }
 
 .menu_card_img {
@@ -195,4 +190,20 @@
     bottom: -13px;
     right: 7px;
     transition: .2s;
+}
+
+.menu_favorite_favorite {
+    background-color: #faf4da;
+    cursor: default;
+}
+
+.menu_favorite_favorite:hover svg {
+    fill: #000;
+    transition: .2s;
+}
+
+.menu_favorite_none {
+    transition: .2s;
+    width: 0px;
+    height: 0px;
 }

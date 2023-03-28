@@ -29,6 +29,24 @@ class Menu extends React.Component {
             })
         }
 
+        if (JSON.parse(localStorage.getItem("favorite")) != null && this.state.favorite_menu) {
+            JSON.parse(localStorage.getItem("favorite")).map((item, key) => {
+                Array.from(document.querySelectorAll('.menu_card')).map(menu => {
+                    if (item.name === menu.querySelector('h3').textContent) {
+                        menu.querySelector('.menu_favorite').classList.add("menu_favorite_none")
+                    }
+                    else {
+                        menu.querySelector('.menu_favorite').classList.remove("menu_favorite_none")
+                    }
+                })
+            }) 
+        }
+        else {
+            Array.from(document.querySelectorAll('.menu_card')).map(menu => {
+                menu.querySelector('.menu_favorite').classList.remove("menu_favorite_none")
+            })
+        }
+
         return (
             <section className="menu">
                 <div className="container">
@@ -88,34 +106,45 @@ class Menu extends React.Component {
                             if (item.categoty === this.props.item) {
                                 return (
                                     <div className="menu_card">
-                                        <button className="menu_favorite" onClick={(e) => {
-                                            // anime({
-                                            //     targets: e.target.localName === "svg" ? (e.target.parentNode) : (e.target),
-                                            //     padding: 0,
-                                            //     width: 0,
-                                            //     height: 0,
-                                            //     duration: 300,
-                                            // })
-                                            let elem = e.target.localName === "svg" ? (e.target) : (e.target.querySelector('svg'))
-                                            console.log(elem.getBoundingClientRect())
-                                            anime({
-                                                targets: elem,
-                                                color: '#000',
-                                                translateX: 1920 - elem.getBoundingClientRect().x - 70,
-                                                translateY: -elem.getBoundingClientRect().y + 40,
-                                            })
+                                        <div className="menu_favorite" onClick={(e) => {
+                                            try {
+                                                let elem = e.target.localName === "svg" ? (e.target) : (e.target.querySelector('svg'))
 
-                                            favorite_menu_copy = this.state.favorite_menu
-                                            favorite_menu_copy.push(item)
+                                                e.target.localName === "svg" ? (e.target.parentNode.classList.add("menu_favorite_favorite")) : 
+                                                                            (e.target.classList.add("menu_favorite_favorite"))
 
-                                            this.setState({
-                                                favorite_menu: favorite_menu_copy
-                                            })
+                                                favorite_menu_copy = this.state.favorite_menu
+                                                favorite_menu_copy.push(item)
 
-                                            localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
+                                                this.setState({
+                                                    favorite_menu: favorite_menu_copy
+                                                })
+
+                                                localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
+
+                                                anime({
+                                                    targets: elem,
+                                                    color: '#000',
+                                                    translateY: -elem.getBoundingClientRect().y + 39.5,
+                                                    translateX: 1920 - elem.getBoundingClientRect().x - 69.5,
+                                                    duration: () => anime.random(1200, 1800),
+                                                })
+
+                                                setTimeout(() => anime({targets: elem, scale: 0}), 1000);
+
+                                                setTimeout(() => 
+                                                    anime({
+                                                        targets: document.querySelectorAll(".favorite svg"), 
+                                                        scale: [ 1.4, 1],
+                                                        duration: 1000
+                                                    }), 1100);
+                                            }
+                                            catch {
+
+                                            }
                                         }}>
                                             <AiOutlineHeart />
-                                        </button>
+                                        </div>
                                         <img className="menu_card_img" src={`./menu/${item.photo}`} alt="" />
                                         <h3 className="menu_card_header">{item.name}</h3>
                                         <p className="menu_card_weight">{item.weight} гр.</p>

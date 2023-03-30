@@ -21,34 +21,118 @@ class Menu extends React.Component {
         }
     }
 
-    render () {
+    CheckingLocalStorage() {
+        if (JSON.parse(localStorage.getItem("favorite")) != null) {
+            JSON.parse(localStorage.getItem("favorite")).map((item, key) => {
+                Array.from(document.querySelectorAll('.menu_card')).map(menu => {
+                    if (item.name === menu.querySelector('h3').textContent) {
+                        menu.querySelector('.menu_favorite').classList.add("menu_favorite_favorite")
+                    }
+                })
+            })
+        }
+        else {
+            Array.from(document.querySelectorAll('.menu_card')).map(menu => {
+                menu.querySelector('.menu_favorite').classList.remove("menu_favorite_favorite")
+                anime({
+                    targets: menu.querySelector('svg'),
+                    color: '#fff',
+                    translateY: 0,
+                    translateX: 0,
+                    scale: 1,
+                    duration: 0,
+                })
+            })
+        }
+    }    
+
+    UnFavorite(item) {
+        Array.from(document.querySelectorAll('.menu_card')).map(menu => {
+            if (item.name === menu.querySelector('h3').textContent) {
+                menu.querySelector('.menu_favorite').classList.remove("menu_favorite_favorite")
+                anime({
+                    targets: menu.querySelector('svg'),
+                    color: '#fff',
+                    translateY: 0,
+                    translateX: 0,
+                    scale: 1,
+                    duration: 0,
+                })
+            }
+        })
+    }
+
+    DeleteItemFavoriteList(key) {
         let favorite_menu_copy = []
 
+        if (JSON.parse(localStorage.getItem("favorite")).length === 1) {
+            favorite_menu_copy = []
+            localStorage.removeItem("favorite")
+
+            this.setState({
+                favorite_menu: [],
+            })
+        }
+        else {
+            favorite_menu_copy = this.state.favorite_menu
+            favorite_menu_copy.splice(key, 1)
+            
+            this.setState({
+                favorite_menu: favorite_menu_copy,
+            })
+
+            localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
+        }
+    }
+
+    AddItemFavoriteList(e, item) {
+        let favorite_menu_copy = []
+
+        try {
+            let elem = e.target.localName === "svg" ? (e.target) : (e.target.querySelector('svg'))
+
+            e.target.localName === "svg" ? (e.target.parentNode.classList.add("menu_favorite_favorite")) : 
+                                        (e.target.classList.add("menu_favorite_favorite"))
+
+            favorite_menu_copy = this.state.favorite_menu
+            favorite_menu_copy.push(item)
+
+            this.setState({
+                favorite_menu: favorite_menu_copy,
+            })
+
+            localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
+
+            anime({
+                targets: elem,
+                color: '#000',
+                translateY: -elem.getBoundingClientRect().y + 39.5,
+                translateX: 1920 - elem.getBoundingClientRect().x - 69.5,
+                duration: () => anime.random(1200, 1800),
+            })
+
+            setTimeout(() => anime({targets: elem, scale: 0}), 1000);
+
+            setTimeout(() => 
+                anime({
+                    targets: document.querySelectorAll(".favorite svg"), 
+                    scale: [ 1.4, 1],
+                    duration: 1000
+                }), 1100);
+        }
+        catch {
+
+        }
+    }
+
+    render () {
         if (JSON.parse(localStorage.getItem("favorite")) != null && this.state.favorite_menu.length === 0) {
             this.setState({
                 favorite_menu: JSON.parse(localStorage.getItem("favorite"))
             })
         }
 
-        if (JSON.parse(localStorage.getItem("favorite")) != null) {
-            JSON.parse(localStorage.getItem("favorite")).map((item, key) => {
-                console.log(item)
-                Array.from(document.querySelectorAll('.menu_card')).map(menu => {
-                    if (item.name === menu.querySelector('h3').textContent) {
-                        menu.querySelector('.menu_favorite').classList.add("menu_favorite_none")
-                    }
-                })
-            })
-            
-            this.setState({ screen: Math.random() });
-        }
-        else {
-            Array.from(document.querySelectorAll('.menu_card')).map(menu => {
-                menu.querySelector('.menu_favorite').classList.remove("menu_favorite_none")
-            })
-
-            this.setState({ screen: Math.random() });
-        }
+        this.CheckingLocalStorage()
 
         return (
             <section className="menu">
@@ -77,23 +161,9 @@ class Menu extends React.Component {
                                     <h3 className="favorite_card_header">{item.name}</h3>
                                     <p className="favorite_card_price">{item.price} ₽</p>
                                     <CiBookmarkMinus className="favorite_card_minus" onClick={() => {
-                                        if (JSON.parse(localStorage.getItem("favorite")).length === 1) {
-                                            this.setState({
-                                                favorite_menu: []
-                                            })
-                                            favorite_menu_copy = []
-                                            localStorage.removeItem("favorite")
-                                        }
-                                        else {
-                                            favorite_menu_copy = this.state.favorite_menu
-                                            favorite_menu_copy.splice(key, 1)
-                                            
-                                            this.setState({
-                                                favorite_menu: favorite_menu_copy
-                                            })
-    
-                                            localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
-                                        }
+                                        this.UnFavorite(item)
+
+                                        this.DeleteItemFavoriteList(key)
                                     }} />
                                 </div>
                             ))
@@ -110,41 +180,7 @@ class Menu extends React.Component {
                                 return (
                                     <div className="menu_card">
                                         <div className="menu_favorite" onClick={(e) => {
-                                            try {
-                                                let elem = e.target.localName === "svg" ? (e.target) : (e.target.querySelector('svg'))
-
-                                                e.target.localName === "svg" ? (e.target.parentNode.classList.add("menu_favorite_favorite")) : 
-                                                                            (e.target.classList.add("menu_favorite_favorite"))
-
-                                                favorite_menu_copy = this.state.favorite_menu
-                                                favorite_menu_copy.push(item)
-
-                                                this.setState({
-                                                    favorite_menu: favorite_menu_copy
-                                                })
-
-                                                localStorage.setItem("favorite", JSON.stringify(this.state.favorite_menu))
-
-                                                anime({
-                                                    targets: elem,
-                                                    color: '#000',
-                                                    translateY: -elem.getBoundingClientRect().y + 39.5,
-                                                    translateX: 1920 - elem.getBoundingClientRect().x - 69.5,
-                                                    duration: () => anime.random(1200, 1800),
-                                                })
-
-                                                setTimeout(() => anime({targets: elem, scale: 0}), 1000);
-
-                                                setTimeout(() => 
-                                                    anime({
-                                                        targets: document.querySelectorAll(".favorite svg"), 
-                                                        scale: [ 1.4, 1],
-                                                        duration: 1000
-                                                    }), 1100);
-                                            }
-                                            catch {
-
-                                            }
+                                            this.AddItemFavoriteList(e, item)
                                         }}>
                                             <AiOutlineHeart />
                                         </div>

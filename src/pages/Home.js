@@ -79,7 +79,7 @@ class Home extends React.Component {
 
                 {
                     this.state.menu.map(item => ( 
-                        <Menu item={item} index={this.chandeIndexItem} favorite={this.state.favorite} changeFavorite={this.changeFavorite} />
+                        <Menu menu={this.state.menu} item={item} index={this.chandeIndexItem} favorite={this.state.favorite} changeFavorite={this.changeFavorite} slider={this.slider} />
                     ))
                 }
             </div>

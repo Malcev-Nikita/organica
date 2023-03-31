@@ -3,6 +3,8 @@ import anime from 'animejs/lib/anime.es.js';
 
 import "../../styles/Home_Menu_style.css"
 
+import Bottom_Nav from "./Bottom_Nav";
+
 import { BiHome } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { CiBookmarkMinus } from 'react-icons/ci';
@@ -198,6 +200,8 @@ class Menu extends React.Component {
                         })   
                     }
                     </div>
+
+                    <Bottom_Nav menu={this.props.menu} index={this.props.index} slider={this.props.slider} />
                 </div>
             </section>
         );

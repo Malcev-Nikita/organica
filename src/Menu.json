@@ -1,5 +1,88 @@
 [
     {
+        "name": "Эспрессо",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "130",
+        "weight": ""
+    },
+    
+    {
+        "name": "Американо",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "150",
+        "weight": ""
+    },
+
+    {
+        "name": "Флет уайт",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "160",
+        "weight": "200"
+    },
+
+    {
+        "name": "Капучино",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "150/200",
+        "weight": "200/300"
+    },
+
+    {
+        "name": "Латте",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "170/220",
+        "weight": "300/450"
+    },
+
+    {
+        "name": "Раф",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "200/250",
+        "weight": "300/450"
+    },
+
+    {
+        "name": "Раф с халвой",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "250",
+        "weight": "300"
+    },
+
+    {
+        "name": "Урбечевый раф",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "250",
+        "weight": "300"
+    },
+
+    {
+        "name": "Капучино ириска",
+        "description": "",
+        "categoty": "Кофе",
+        "photo": "",
+        "price": "250",
+        "weight": "300"
+    },
+
+
+    
+    {
         "name": "Груша-горгондзола",
         "description": "",
         "categoty": "Пицца",

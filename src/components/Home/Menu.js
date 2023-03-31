@@ -4,6 +4,7 @@ import anime from 'animejs/lib/anime.es.js';
 import "../../styles/Home_Menu_style.css"
 
 import Bottom_Nav from "./Bottom_Nav";
+import Pagination from "./Pagination";
 
 import { BiHome } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
@@ -139,7 +140,7 @@ class Menu extends React.Component {
         return (
             <section className="menu">
                 <div className="container">
-                    <button className="back" onClick={() => this.props.index(0)}>
+                    <button className="back" onClick={() => this.props.chandeIndexItem(0)}>
                         <BiHome />
                     </button>
 
@@ -201,7 +202,9 @@ class Menu extends React.Component {
                     }
                     </div>
 
-                    <Bottom_Nav menu={this.props.menu} index={this.props.index} slider={this.props.slider} />
+                    <Pagination index={this.props.index} />
+
+                    <Bottom_Nav menu={this.props.menu} chandeIndexItem={this.props.chandeIndexItem} slider={this.props.slider} />
                 </div>
             </section>
         );

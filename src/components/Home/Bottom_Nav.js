@@ -20,7 +20,7 @@ class Bottom_Nav extends React.Component {
                 this.props.menu.map((item) => {
                     { i++ }
                     return (
-                        <div className="bottom_nav_card" onClick={() => this.props.index(this.props.menu.indexOf(item) + 1)}>
+                        <div className="bottom_nav_card" onClick={() => this.props.chandeIndexItem(this.props.menu.indexOf(item) + 1)}>
                             <img className="bottom_nav_card_img" src={require(`../../image/icon/${this.state.icons[i]}.svg`)} />
                             <p> {this.state.menu[i]} </p>
                         </div>

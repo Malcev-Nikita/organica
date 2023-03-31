@@ -75,11 +75,11 @@ class Home extends React.Component {
 
         return (
             <div className="Home" style={{transform: `translateX(${this.state.slider}px)`}}>
-                <Nav menu={this.state.menu} index={this.chandeIndexItem} slider={this.slider} />
+                <Nav menu={this.state.menu} chandeIndexItem={this.chandeIndexItem} slider={this.slider} />
 
                 {
                     this.state.menu.map(item => ( 
-                        <Menu menu={this.state.menu} item={item} index={this.chandeIndexItem} favorite={this.state.favorite} changeFavorite={this.changeFavorite} slider={this.slider} />
+                        <Menu menu={this.state.menu} item={item} chandeIndexItem={this.chandeIndexItem} index={this.state.index} favorite={this.state.favorite} changeFavorite={this.changeFavorite} slider={this.slider} />
                     ))
                 }
             </div>

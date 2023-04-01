@@ -1,3 +1,4 @@
+import anime from "animejs";
 import React from "react";
 
 
@@ -8,38 +9,56 @@ class Pagination extends React.Component {
         this.state = {
             i: 0
         }
-
-        this.increment = this.increment.bind(this)
-        this.page = this.page.bind(this)
-    }
-
-    increment() {
-        this.setState({
-            i: this.state.i + 1
-        })
-    }
-
-    page(menu_card) {
-        this.setState({i: 0})
-        while (this.state.i <= Math.ceil(menu_card / 6)) {
-            console.log(Math.ceil(menu_card / 6))
-            console.log(this.state.i)
-            this.increment()
-            return (
-                <div className="page"> {this.state.i} </div>
-            )
-        }
     }
 
     render() {
         const menu = document.getElementsByClassName('menu')[this.props.index - 1]
         const menu_card = menu === undefined ? (0) : (menu.querySelectorAll('.menu_card').length)
+        let index = 0
 
-        if (menu_card > 6) {
+        if (menu_card > 8) {
             return (
                 <div className="pagination">
                 {
-                    this.page(menu_card)
+                    Array(Math.ceil(menu_card / 8)).fill(1).map(e => {
+                        index++
+
+                        if (index === 1) {
+                            return ( 
+                                <div className="page page_active" onClick={(e) => {  
+                                    Array.from(document.getElementsByClassName('page')).map(e => e.classList.remove('page_active'))
+                    
+                                    anime({
+                                        targets: e.target,
+                                        scale: [ 1.6, 1],
+                                        duration: 500,
+                                    })
+                    
+                                    e.target.classList.add("page_active")
+                                }}> 
+                                    {index} 
+                                </div> 
+                            )
+                        }
+
+                        else {
+                            return ( 
+                                <div className="page" onClick={(e) => {  
+                                    Array.from(document.getElementsByClassName('page')).map(e => e.classList.remove('page_active'))
+                    
+                                    anime({
+                                        targets: e.target,
+                                        scale: [ 1.6, 1],
+                                        duration: 500,
+                                    })
+                    
+                                    e.target.classList.add("page_active")
+                                }}> 
+                                    {index} 
+                                </div> 
+                            )
+                        }
+                    })
                 }
                 </div>
             )

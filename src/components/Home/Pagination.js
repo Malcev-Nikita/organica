@@ -1,6 +1,5 @@
-import anime from "animejs";
 import React from "react";
-
+import anime from "animejs";
 
 class Pagination extends React.Component {
     constructor(props) {

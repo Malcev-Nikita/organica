@@ -129,6 +129,8 @@ class Menu extends React.Component {
     }
 
     render () {
+        console.log(document.getElementsByClassName('page'))
+
         if (JSON.parse(localStorage.getItem("favorite")) != null && this.state.favorite_menu.length === 0) {
             this.setState({
                 favorite_menu: JSON.parse(localStorage.getItem("favorite"))

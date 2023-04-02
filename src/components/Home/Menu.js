@@ -189,8 +189,9 @@ class Menu extends React.Component {
                                         }}>
                                             <AiOutlineHeart />
                                         </div>
-                                        <img className="menu_card_img" src={`./menu/${item.photo}`} alt="" />
+                                        <div className="menu_card_img" style={{background: `url(./menu/${item.photo}) no-repeat`, backgroundPosition: "center", backgroundSize: "215px auto"}} alt="" />
                                         <h3 className="menu_card_header">{item.name}</h3>
+                                        {/* <h3 className="menu_card_descr">{item.description}</h3> */}
                                         <p className="menu_card_weight">{item.weight} гр.</p>
                                         <p className="menu_card_price">{item.price} ₽</p>
                                     </div>
@@ -204,7 +205,7 @@ class Menu extends React.Component {
                     }
                     </div>
 
-                    <Pagination index={this.props.index} />
+                    {/* <Pagination index={this.props.index} /> */}
 
                     <Bottom_Nav menu={this.props.menu} chandeIndexItem={this.props.chandeIndexItem} slider={this.props.slider} />
                 </div>

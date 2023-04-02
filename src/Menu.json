@@ -23,7 +23,7 @@
         "name": "Флет уайт",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "_.jpg",
         "price": "160",
         "weight": "200"
     },
@@ -32,7 +32,7 @@
         "name": "Капучино",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "022.jpg",
         "price": "150/200",
         "weight": "200/300"
     },
@@ -41,7 +41,7 @@
         "name": "Латте",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "018.jpg",
         "price": "170/220",
         "weight": "300/450"
     },
@@ -50,7 +50,7 @@
         "name": "Раф",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "020.jpg",
         "price": "200/250",
         "weight": "300/450"
     },
@@ -59,7 +59,7 @@
         "name": "Раф с халвой",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "021.jpg",
         "price": "250",
         "weight": "300"
     },
@@ -68,7 +68,7 @@
         "name": "Урбечевый раф",
         "description": "",
         "categoty": "Кофе",
-        "photo": "",
+        "photo": "021.jpg",
         "price": "250",
         "weight": "300"
     },
@@ -458,7 +458,7 @@
         "name": "Какао",
         "description": "",
         "categoty": "Какао",
-        "photo": "",
+        "photo": "023.jpg",
         "price": "200",
         "weight": "450"
     },

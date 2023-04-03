@@ -79,7 +79,7 @@
         "name": "Цитрусовый",
         "description": "",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "tsitchai8-1300x867.jpg",
         "price": "200",
         "weight": "450"
     },
@@ -88,7 +88,7 @@
         "name": "Ягодный",
         "description": "",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "bf0a0a37.jpg",
         "price": "200",
         "weight": "450"
     },
@@ -97,7 +97,7 @@
         "name": "Облепиховый",
         "description": "",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "5868886c6881b2c1cea07b0bf494a493.png",
         "price": "200",
         "weight": "450"
     },
@@ -106,7 +106,7 @@
         "name": "Тропический",
         "description": "",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "25ac0959e5cb46fe10313dffd5d16743.jpg",
         "price": "200",
         "weight": "450"
     },
@@ -115,7 +115,7 @@
         "name": "Чёрный",
         "description": "с бергамотом",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "1200-ed4_wide.jpg",
         "price": "200",
         "weight": "1000"
     },
@@ -124,7 +124,7 @@
         "name": "Зелёный",
         "description": "со сметанным яблоком",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "nBkSUhL2hFUum82wJr6BrNOp2Z318Ji-miDHnvyDoGuQYX7XByXLjCdwu5tI-BaO-42NvWWBK8AqGfS8kjIzIymM8G1N_xHb1A=-hbbDq2N9Bi-2C4pFFsqNg.jpg",
         "price": "200",
         "weight": "1000"
     },
@@ -133,7 +133,7 @@
         "name": "Арабская ночь",
         "description": "Чай чёрный, чай зелёный, яблоко, черника, клубника, лепестки розы, гибискус и сафлора",
         "categoty": "Чай",
-        "photo": "",
+        "photo": "2426.d2f5e54379140b74080921a24b4ad5fb2426.jpg",
         "price": "250",
         "weight": "1000"
     },
@@ -219,16 +219,16 @@
         "name": "Карбонара",
         "description": "Паста феттучини, бекон, пармезан, куринное яицо, черри, зеленб, чеснок, оливковое масло, сливочный соус",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "be1c415b.jpg",
         "price": "350",
         "weight": "330"
     },
 
     {
-        "name": "Курица / Шампиньоны",
+        "name": "Курица",
         "description": "Паста феттучини, куринная грудка, сливочный соус, черри, грибы шампиньоны, пармезан, зелень",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "recept_3422_32tl.jpg",
         "price": "350",
         "weight": "350"
     },
@@ -237,7 +237,7 @@
         "name": "Маринара",
         "description": "Паста феттучини, кальмар, тигровые креветки, мидии, пармезан, чеснок, зелень, соус мутти",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "2208-easy-spaghetti-marinara_Mobile-1300x1150.webp",
         "price": "500",
         "weight": "420"
     },
@@ -246,16 +246,16 @@
         "name": "Вегана",
         "description": "Паста феттучини, помидор, болгарский перец, кабачок, чеснок, зелень, оливковое масло, соевый соус, соус мутти",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "img_2661.jpg",
         "price": "280",
         "weight": "320"
     },
 
     {
-        "name": "С креветками и соусом мутти",
+        "name": "С креветками",
         "description": "Паста феттучини, тигровые креветки, болгарский перец, кабачок, укроп, томатный соус",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "shutterstock_1050528674_1589894666-e1589894746375-1280x640.jpg",
         "price": "390",
         "weight": "320"
     },
@@ -264,7 +264,7 @@
         "name": "Мак & Чиз",
         "description": "Макароны челлентани, чедер, молоко, сливочное масло, укроп, черри",
         "categoty": "Паста",
-        "photo": "",
+        "photo": "shutterstock_592380254_1617817333-scaled-e1617817418527-1280x640.jpg",
         "price": "350",
         "weight": "420"
     },
@@ -275,7 +275,7 @@
         "name": "Суп буйабес",
         "description": "Лосось, креветки, кальмар, мидии, томат мутти, картофель, лук, морковь, сельдерей, масло оливковое",
         "categoty": "Супы",
-        "photo": "",
+        "photo": "00021214.jpg",
         "price": "470",
         "weight": "300"
     },
@@ -284,7 +284,7 @@
         "name": "Суп минестроне",
         "description": "Брокколи, кабачок, картофель, горошек",
         "categoty": "Супы",
-        "photo": "",
+        "photo": "-sup-minestrone-ovoshchnoi-sup-minestrone_1494492837_1_max.jpg",
         "price": "220",
         "weight": "300"
     },
@@ -292,46 +292,46 @@
     "- - - - - - - - - - Салаты - - - - - - - - - -",
 
     {
-        "name": "Просто салат с домашней моцареллой и песто",
+        "name": "Cалат с песто",
         "description": "Шпинат, щавель, руккола, романо, соус, песто, черри, моцарелла домашняя",
         "categoty": "Салаты",
-        "photo": "",
+        "photo": "maxresdefault.jpg",
         "price": "290",
         "weight": "220"
     },
 
     {
-        "name": "Просто салат с грушей и киноа",
+        "name": "Cалат с грушей",
         "description": "Киноа, редис, морковь, лист салата, грецкий орех, груша, творожный сыр, соус тахини",
         "categoty": "Салаты",
-        "photo": "",
+        "photo": "103502-ed4_wide.jpg",
         "price": "310",
         "weight": "160"
     },
 
     {
-        "name": "Томаты & Страчетелла",
+        "name": "Страчетелла",
         "description": "Свежие помидоры, домашняя страчателла, руккола",
         "categoty": "Салаты",
-        "photo": "",
+        "photo": "vYkDN33WQ7StBS6u5JlJwsA9Y31MvGgOAyE0ohKAthQ.jpg",
         "price": "260",
         "weight": "155"
     },
 
     {
-        "name": "Зелёный салат с креветками",
+        "name": "Зелёный салат",
         "description": "Тигровые креветки, лист салата, руккола, черри, огурец",
         "categoty": "Салаты",
-        "photo": "",
+        "photo": "bcb59e7a.jpg",
         "price": "380",
         "weight": "280"
     },
 
     {
-        "name": "Органик салат с лососем",
+        "name": "Органик салат",
         "description": "Маринованный лосось, лист салата, болгарский перец, черри, кабачок, огурец, пшеничная лепёшка",
         "categoty": "Салаты",
-        "photo": "",
+        "photo": "b2b15f454dd8777ba68ace4bc5368afe-600x450.jpeg",
         "price": "390",
         "weight": "280"
     },
@@ -342,7 +342,7 @@
         "name": "Классический",
         "description": "",
         "categoty": "Коктейли",
-        "photo": "",
+        "photo": "f82e36e9133138e3d938c3bb32c309a7_ce_1200x628x0x0_cropped_666x444.jpg",
         "price": "180",
         "weight": "500"
     },
@@ -351,7 +351,7 @@
         "name": "Банановый",
         "description": "",
         "categoty": "Коктейли",
-        "photo": "",
+        "photo": "960m.jpg",
         "price": "180",
         "weight": "500"
     },
@@ -360,7 +360,7 @@
         "name": "Малиновый",
         "description": "",
         "categoty": "Коктейли",
-        "photo": "",
+        "photo": "u6009-c8dd644395f93b09cd630d6cab45b920.jpg",
         "price": "180",
         "weight": "500"
     },
@@ -371,7 +371,7 @@
         "name": "Боул с креветкой",
         "description": "Тигровые креветки, рис, оливковое масло, редис, черри, кукуруза, чука, кунжутное семя, кунжутный соус, соус для риса",
         "categoty": "Боулы",
-        "photo": "",
+        "photo": "Lesi1wXzTp5TrRlRhftBVTNZIpQDDJwZdIhm5BP1.jpeg",
         "price": "390",
         "weight": "460"
     },
@@ -380,7 +380,7 @@
         "name": "Боул с курицей",
         "description": "Куринная грудка, рис, огурец, болгарский перец, ананас, горох лист салата, кунжутное семя, соус для риса, оливковое масло",
         "categoty": "Боулы",
-        "photo": "",
+        "photo": "Boul-s-kuricej-i-bulgurom-500х350-1200x800.jpg",
         "price": "350",
         "weight": "490"
     },
@@ -389,7 +389,7 @@
         "name": "Боул с лососем",
         "description": "Лосось, рис, огурец, болгарский перец, персик, чука, кукуруза, кунжутное семя, кунжутный соус, соус терияки, соус для риса",
         "categoty": "Боулы",
-        "photo": "",
+        "photo": "Snimok-ekrana20191031161814.jpg",
         "price": "390",
         "weight": "410"
     },
@@ -398,7 +398,7 @@
         "name": "Боул с халуми",
         "description": "Халуми, рис, огурец, редис, болгарский перец, лист салата, грецкий орех, соус для риса",
         "categoty": "Боулы",
-        "photo": "",
+        "photo": "IMG_1885-scaled.jpg",
         "price": "370",
         "weight": "410"
     },
@@ -407,7 +407,7 @@
         "name": "Будда боул",
         "description": "Тофу, жаренный нут, киноа, запечённый болгарский перец, запечённая свекла, морковь, тахини соус",
         "categoty": "Боулы",
-        "photo": "",
+        "photo": "budda_boul-564883.jpeg",
         "price": "350",
         "weight": "430"
     },
@@ -418,7 +418,7 @@
         "name": "Ягодный микс",
         "description": "Малина, черника, банан",
         "categoty": "Смузи",
-        "photo": "",
+        "photo": "smuzi_yagodnyj_miks_smoothie_600px.webp",
         "price": "220",
         "weight": "500"
     },
@@ -427,16 +427,16 @@
         "name": "Зелённый микс",
         "description": "Чблоко, огурец, лайм",
         "categoty": "Смузи",
-        "photo": "",
+        "photo": "3.jpg",
         "price": "220",
         "weight": "500"
     },
 
     {
-        "name": "Морковно-апельсиновый микс",
+        "name": "Апельсиновый микс",
         "description": "Морковь, апельсин, яблоко",
         "categoty": "Смузи",
-        "photo": "",
+        "photo": "98c8c55b59b11d3b1095110ddbebb2cd.webp",
         "price": "220",
         "weight": "500"
     },
@@ -447,7 +447,7 @@
         "name": "Свежевыжатый сок",
         "description": "",
         "categoty": "Сок",
-        "photo": "",
+        "photo": "csykk2rk47699.jpg",
         "price": "150 / 200 / 250",
         "weight": "200 / 350 / 500"
     },
@@ -469,7 +469,7 @@
         "name": "Ягодный",
         "description": "Малина, черника, лимон",
         "categoty": "Лимонад",
-        "photo": "",
+        "photo": "jagodnyj-limonad.jpeg",
         "price": "160 / 200",
         "weight": "350 / 500"
     },
@@ -478,7 +478,7 @@
         "name": "Цитрусовый",
         "description": "Апельсин, лимон, лайм",
         "categoty": "Лимонад",
-        "photo": "",
+        "photo": "citrusoviy-limonad-2.jpg",
         "price": "160 / 200",
         "weight": "350 / 500"
     },
@@ -487,7 +487,7 @@
         "name": "Облепиховый",
         "description": "Облепиха, лимон, имбирь",
         "categoty": "Лимонад",
-        "photo": "",
+        "photo": "u-d3d4cabb25646df881bcca800fe6d7e9.jpg",
         "price": "160 / 200",
         "weight": "350 / 500"
     }
